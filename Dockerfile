@@ -5,7 +5,7 @@ MAINTAINER alex.blewitt+github@gmail.com
 # See https://github.com/alblue/dnsmasq-example
 # See https://alblue.bandlem.com/2020/05/using-dnsmasq.html
 
-RUN apt update && apt install -y dnsmasq
+RUN apt update && apt install -y dnsmasq iputils-ping dnsutils 
 
 # When docker image run, execute dnsmasq in foreground
 # This can be used to mount a directory with dnsmasq.d and dnsmasq.conf:
