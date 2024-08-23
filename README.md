@@ -58,5 +58,5 @@ to verify syntax, and when executing, it will run the daemon in foreground
 mode so that results can be seen as they run.
 
     $ docker build . -t dnsmasq
-    $ docker run --rm -it --name dnsmasq -v $(PWD)/dnsmasq.d:/etc/dnsmasq.d:ro dnsmasq
+    $ docker run --rm -it --name dnsmasq -v ${PWD}/dnsmasq.d:/etc/dnsmasq.d:ro dnsmasq
     $ docker exec -it dnsmasq dig @localhost example.com
