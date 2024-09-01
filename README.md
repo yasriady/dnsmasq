@@ -57,6 +57,7 @@ configurations. When building the docker image, it will run `dnsmasq --test`
 to verify syntax, and when executing, it will run the daemon in foreground
 mode so that results can be seen as they run.
 
+    $ sudo systemctl stop systemd-resolved.service
     $ docker build . -t dnsmasq
     $ docker run --rm -it --name dnsmasq -v ${PWD}/dnsmasq.d:/etc/dnsmasq.d:ro dnsmasq (Ddy: NOT USED ANYMORE)
     $ docker run --rm -it --name dnsmasq -v ${PWD}/dnsmasq.d:/etc/dnsmasq.d:ro -v ${PWD}/hosts:/etc/hosts -p 53:53/tcp -p 53:53/udp dnsmasq
